@@ -1,3 +1,0 @@
-ffast==0.3.16
-scikit-learn==1.0.2
-prompt-engineering==0.0.6
