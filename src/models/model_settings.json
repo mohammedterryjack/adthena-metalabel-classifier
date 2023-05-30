@@ -1,0 +1,7 @@
+{
+  "sample_delimiter": "\n",
+  "label_delimiter": ",",
+  "train_split": 0.99,
+  "model_path":"src/models/model_nb.json",
+  "report_path":"data/model_report.txt"
+}
