@@ -30,6 +30,23 @@ e.g.
 ```
 pip install prompt_engineering
 ```
+```python
+from prompt_engineering import api, task
+
+@api(
+    endpoint="https://api.openai.com/v1/engines/text-davinci-002/completions",
+    key=YOUR_OPENAI_KEY,
+    hyperparameters=dict(temperature=0.6),
+    cache=False,
+)
+def gpt3(data: dict) -> None:
+    return data["choices"][0]["text"]
+
+@task("topic_classification")
+def zero_shot_classify(search_term: str) -> str:
+    generated_text = gpt3(dict(prompt=search_term))
+    return generated_text.split("The topic of this article is:")[-1].strip()
+```
 
 The code can be found in `zero_shot_test.py` and run if desired (note: requires you to insert a valid api key first):
 
