@@ -1,4 +1,4 @@
-# Adthena Technical Interview: Metalabel Classifier
+# Metalabel Classifier
 
 ## Task
 Classify search terms accurately 
